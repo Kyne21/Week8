@@ -1,0 +1,64 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.9708947507755544 -0.2274635180540346 -0.07499153866241158 0.7280601965269756
+  position -0.207076125626695 0.8778508447567295 1.0399853074430907
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 141.0534266139055
+  hidden position_0_1 120.59089395791347
+  hidden linearVelocity_0 0.060847580399855695 3.989011998725859e-08 0.01518768748614481
+  hidden angularVelocity_0 -0.0013818080733956795 -3.5601788907082625e-05 0.005585931184495043
+  hidden rotation_1 -0.9999999999999999 0 0 2.823349855954584
+  hidden linearVelocity_1 0.06082039688380976 3.109997059314981e-07 0.015180841485751826
+  hidden angularVelocity_1 0.7590390916848424 -2.955790603280239e-05 -3.040946534354301
+  hidden rotation_2 1 0 0 5.072812185678264
+  hidden linearVelocity_2 0.06081890611834052 -3.101102238017685e-07 0.015180715340732166
+  hidden angularVelocity_2 0.7590390020141059 -2.9704626697481272e-05 -3.0409465539280416
+  translation 0.12923209259471063 -6.394671674278714e-05 -0.07760349999042722
+  rotation -0.0005402604028682899 0.9999996162448954 -0.0006896584365012426 -1.8154018473062257
+  controller "my_controller"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.02 0
+      name "ir1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      name "ir0"
+      type "infra-red"
+    }
+  ]
+}
+TrackOne {
+  translation 0 -0.0075 0
+}
